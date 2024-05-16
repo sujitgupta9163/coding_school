@@ -1,6 +1,82 @@
 import Nav from "./Nav";
 import Footer from "./Footer";
 
+
+const teachers = [
+  {
+    image : "./teachers/a.jpg",
+    name : "Raj kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/b.jpg",
+    name : "Devanand kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/c.jpg",
+    name : "Lalit kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/d.jpg",
+    name : "Nikhil kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/e.jpg",
+    name : "Toshak kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/f.jpg",
+    name : "Tanishk kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/g.jpg",
+    name : "Sunny kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/h.jpg",
+    name : "Sujit kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/i.jpg",
+    name : "Aditya kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/j.jpg",
+    name : "Alok kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/k.jpg",
+    name : "Vipry kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+
+  {
+    image : "./teachers/l.jpg",
+    name : "Surendar kumar",
+    qua : "MCA (Quantum Univercity)"
+  },
+  
+]
+
 const Teachers =()=>{
   return(
     <div>
@@ -33,108 +109,21 @@ const Teachers =()=>{
           rowGap : 40,
           flexWrap : "wrap"
         }}>
-          <div style={{width : "20%"}}>
-            <img src="./teachers/a.jpg" width="100%" style={{borderRadius : "5px"}}/>
-            <h2>Sumit kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/b.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }} />
-            <h2>Abhshek kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/c.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Alok kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/d.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Lalit kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/e.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Toshak kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/f.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Nikhil kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/g.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Krishna kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/h.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Devanand kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/i.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Sujit kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/j.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Aditya kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/k.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Sunny kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-          <div style={{width : "20%"}}>
-            <img src="./teachers/c.jpg" width="100%" style={{
-              borderRadius : "5px"
-            }}/>
-            <h2>Sumit kumar</h2>
-            <p>MCA (Quantum Univercity)</p>
-          </div>
-
-
-
           
 
+          {
+            teachers.map((teacher , index)=>{
+              return (
+                <div style={{width : "20%"}} key={index}>
+                  <img src={teacher.image} width="100%" alt={teacher.image} style={{borderRadius : "5px"}}/>
+                  <h2>{teacher.name}</h2>
+                  <p>{teacher.qua}</p>
+              </div>
+              )
+            })
+          }
+
         </section>
-
-
       </div>
       <Footer/>
     </div>

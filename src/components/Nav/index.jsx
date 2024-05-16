@@ -2,6 +2,28 @@
 import {Link} from "react-router-dom";
 import "./nav.css"
 
+const menus = [
+    {
+      label : "Home",
+      href : "/",
+    },
+
+    {
+      label : "Teachers",
+      href : "/teachers",
+    },
+
+    {
+      label : "Holidays",
+      href : "/holidays",
+    },
+
+    {
+      label : "Contact",
+      href : "/contact-us",
+    },
+]
+
 const Nav = ()=>{
   return(
     <nav style={{
@@ -35,61 +57,27 @@ const Nav = ()=>{
           gap : "50px",
           
         }}>
-           <li style={{
-            display : "flex",
-            alignItems : "center",
-            padding : 10,
-            
-           }}>
-            <Link to="/" style={{
-            textDecoration : "none",
-            color : "#323232",
-            fontSize : "18px",
-           
-           }}>Home</Link></li>
+          
 
-           <li style={{
-            display : "flex",
-            alignItems : "center",
-            padding : 10,
-            
-           }}>
-            
-            <Link to="/teachers" style={{
-            textDecoration : "none",
-            color : "#323232",
-            fontSize : "18px",
-           
-           }}>Teachers</Link></li>
+          {menus.map((memu , index)=>{
+            return(
+              <li style={{
+                   display : "flex",
+                   alignItems : "center",
+                   padding : 10,
+                
+               }}>
+                <Link to={memu.href} style={{
+                textDecoration : "none",
+                color : "#323232",
+                fontSize : "18px",
+               
+               }}>{memu.label}</Link></li>
+    
+            )
+          })}
 
-            <li style={{
-            display : "flex",
-            alignItems : "center",
-            padding : 10,
-            
-           }}>
-           
-            <Link to="/holidays" style={{
-            textDecoration : "none",
-            color : "#323232",
-            fontSize : "18px",
-           
-           }}>Holiday</Link></li>
-
-            <li style={{
-            display : "flex",
-            alignItems : "center",
-            padding : 10,
-            
-           }}>
-            
-            <Link to="/contact-us" style={{
-            textDecoration : "none",
-            color : "#323232",
-            fontSize : "18px",
-           
-           }}>Contact </Link></li>
-
+          
           <li style={{
             display : "flex",
             alignItems : "center",
