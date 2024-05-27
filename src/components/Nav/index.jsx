@@ -26,7 +26,9 @@ const menus = [
 
 const Nav = ()=>{
   return(
-    <nav style={{
+    <nav 
+    className="sticky top-0 left-0 z-50"
+    style={{
       background : "white",
       display : "flex",
       justifyContent : "space-between",
@@ -46,7 +48,7 @@ const Nav = ()=>{
          alt="" 
      />
 
-     <h1>Coding Institute</h1>
+     <h1 className="text-3xl font-bold">Coding Institute</h1>
         </div>
 
         <ul style={{
